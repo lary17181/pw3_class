@@ -3,3 +3,6 @@
                     [clip]= false></app-text-overflow>
                     <!--  <app-biscoito [quebrado]="true"></app-biscoito>
 <app-frases [exibe]="true"></app-frases> -->
+<app-aleatorio [min]="1" [max]="15"
+(resultado)="processar($event)"></app-aleatorio>
+<p>{{resultado}}</p>
