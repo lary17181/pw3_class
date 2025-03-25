@@ -7,5 +7,24 @@ import { Component } from '@angular/core';
   styleUrl: './imagem.component.css'
 })
 export class ImagemComponent {
+    imagem:string='biscoito.png'
+    foto:boolean=true
+
+      biscoito1="biscoito.png";
+      biscoito2="biscoito-aberto.png";
+
+
+    mudar():string{
+
+      this.foto=!this.foto;
+      if (this.foto==true) {
+        this.imagem= this.biscoito1;
+      } else {
+        this.imagem= this.biscoito2;
+      }
+      return this.imagem
+    }
+
+
 
 }
