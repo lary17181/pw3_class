@@ -11,6 +11,9 @@ import { Component, Input } from '@angular/core';
 export class BotaoComponent {
 
 @Input() texto:string ="botão";
-@Input() classe:string ='botao';
+@Input() classe:boolean =true;
 @Input() habilitado:boolean=true;
+
+
 }
+
