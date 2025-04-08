@@ -1,1 +1,10 @@
-<p>biscoito works!</p>
+<div class = "container">
+  <app-imagem [quebrado]="ehQuebrado"></app-imagem>
+
+  <app-frases [visible]="ehQuebrado"></app-frases>
+
+  <app-botao [label]="'Quebrar Biscoito'" (clicked)="Quebrar()" [disabled]="ehQuebrado"></app-botao>
+
+  <app-botao [label]="'Reiniciar Biscoito'" [primary]="false" (clicked)="Reiniciar()"></app-botao>
+
+</div>

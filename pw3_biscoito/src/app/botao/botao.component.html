@@ -1,3 +1,2 @@
-<button class="classe ?'.botao':'.secundario'"
-habilitado = "true">
-</button>
+<button [class] ="primary ? 'botao' : 'botao reiniciar-botao'"
+(click)="onClick()" [disabled]="disabled">{{label}}</button>

@@ -1,6 +1,6 @@
 import { ImagemComponent } from './../imagem/imagem.component';
 import { FrasesComponent } from './../frases/frases.component';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-botao',
@@ -10,9 +10,14 @@ import { Component, Input } from '@angular/core';
 })
 export class BotaoComponent {
 
-@Input() texto:string ="botão";
-@Input() classe:boolean =true;
-@Input() habilitado:boolean=true;
+@Input() label:string ="";
+@Input() primary:boolean =true;
+@Output() clicked = new EventEmitter();
+@Input() disabled = false;
+
+onClick() {
+  this.clicked.emit();
+}
 
 
 }

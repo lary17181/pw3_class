@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
 
 @Component({
   selector: 'app-frases',
@@ -22,10 +22,9 @@ export class FrasesComponent {
     "A jornada é tão importante quanto o destino."
   ];
 
-  mensagem:string = '';
-
-  gerarfrase() {
-    if (this.foto==true) {
-      this.mensagem = this.frases[Math.floor(Math.random() * this.frases.length)];
-    }
-  }}
+ @Input() visible: boolean = false;
+ gerarFrase(){
+  let indice = Math.floor(Math.random() * this.frases.length);
+  return this.frases[indice];
+ }
+  }
