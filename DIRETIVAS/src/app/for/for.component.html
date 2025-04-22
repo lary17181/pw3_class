@@ -1,0 +1,16 @@
+
+@if(mostrar){
+    @for (a of tarefas; track $index){
+    <li>{{$index+1}} - {{a.Nome}}</li>
+}}
+@if(concluidas){
+    @for (a of tarefas; track $index){
+        @if(a.feito==true){
+            <li>{{$index+1}} - {{a.Nome}}</li>
+        }
+    }
+}
+
+<button (click)="Exibir()">Mostrar todas</button>
+
+
