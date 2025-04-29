@@ -9,19 +9,21 @@ import { Component } from '@angular/core';
 export class ForComponent {
 tarefas: any[]=
 [
-  {Id:1, Nome:"Estudar", feito:true},
+  {Id:1, Nome:"Estudar", feito:false},
   {Id:2, Nome:"Dormir", feito:false},
-  {Id:3, Nome:"Comer", feito:true},
+  {Id:3, Nome:"Comer", feito:false},
   {Id:4, Nome:"Tomar banho", feito:false},
   {Id:5, Nome:"Cozinhar", feito:false},
 ]
 mostrar:boolean=false
-concluidas:boolean=false
+
 
 Exibir(){
-  this.mostrar=true
+  this.mostrar=!this.mostrar;
 }
 tarefasConcluidas(){
-this.concluidas=true
+return this.tarefas.filter((a)=>{
+  return a.feito;
+})
 }
 }

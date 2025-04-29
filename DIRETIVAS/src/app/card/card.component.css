@@ -1,0 +1,22 @@
+.titulo
+{
+  color: white;
+  background-color: black;
+  width: 200px;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  border: 4px black;
+  border-radius: 5%;
+
+}
+.corpo
+{
+  background-color: yellow;
+  width: 200px;
+  height: 200px;
+  border: 100px;
+  border-color: black;
+  border-radius: 5%;
+
+}
