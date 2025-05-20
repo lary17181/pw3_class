@@ -8,6 +8,8 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './calculadora.component.css'
 })
 export class CalculadoraComponent {
+
+
 Form:FormGroup;
 
 constructor(private fb: FormBuilder){

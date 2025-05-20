@@ -1,0 +1,20 @@
+@if(click==false && autenticado==false){
+<form [formGroup]="Form">
+<label for="Usuario">Usuario:</label>
+<input id="Usuario" type="string"formControlName="Usuario"/>
+<br>
+<label for="Senha">Senha:</label>
+<input id="Senha" type="string"formControlName="Senha"/>
+<br/>
+<button (click)="login()" > Autenticar</button>
+</form>
+}
+@if(autenticado){
+  <h1>Bem Vindo, {{Usuario}}</h1>
+}
+@else if(click==true){
+  <p>Usuario/Senha inválidos</p>
+}
+
+
+
